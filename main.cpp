@@ -4,6 +4,7 @@
 #include "Figure.h"
 #include "Rectangle.h"
 #include "Square.h"
+#include "Triangle.h"
 
 
 int main()
@@ -13,6 +14,7 @@ int main()
     Rectangle R3;
     Square S1("S1", 5.0);
     Circle C1("C1", 5.0);
+    Triangle T1("t1", 5.0);
     R1.Info();
     std::cout << std::endl;
     R2.Info();
@@ -22,14 +24,15 @@ int main()
     S1.Info();
     cout<<endl;
     C1.Info();
+    cout<<endl;
+    T1.Info();
+    cout<<endl;
     std::cout << "Wykorzystanie wskaźnika" << std::endl;
-    Figure* pointer_s = &S1;
-    Figure* pointer_r = &R1;
-    std::cout << std::endl;
-    pointer_s->Info();
-    std::cout << std::endl;
-    pointer_r->Info();
-
+    Figure* figures[] = {&R1, &R2, &R3, &S1, &C1, &T1};
+    for (int i = 0; i <  5; i++) {
+        figures[i]->Info();
+        cout<<endl;
+    }
     std::cout << "Wykorzystanie referencji" << std::endl;
     Figure& ref_s = S1;
     Figure& ref_r = R1;

@@ -21,8 +21,8 @@ float Circle::Perimeter() const
 
 void Circle::Info() const
 {
-    cout << "Square: " << Name() << endl;
-    cout << "Dimension: " << m_radius << endl;
+    cout << "Circle: " << Name() << endl;
+    cout << "Radius: " << m_radius << endl;
     cout << "Area: " << M_PI * m_radius * m_radius << endl;
     cout << "Perimeter: " << 2 * M_PI * m_radius << endl;
 }

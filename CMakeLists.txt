@@ -11,4 +11,6 @@ add_executable(Inheritance main.cpp
         square.cpp
         square.h
         Circle.cpp
-        Circle.h)
+        Circle.h
+        triangle.cpp
+        triangle.h)
